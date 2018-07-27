@@ -1,0 +1,14 @@
+mixin header(time)
+  header.header
+    .container
+      .header__inner
+        .header__info
+          .header__logo
+            +logo
+          .header__time
+            p= time
+        .header__links
+          .header__nav
+            block
+          +header_buy()
+

@@ -1,0 +1,12 @@
+mixin feedback-card()
+  section.feedback
+    .container
+      .feedback__inner
+        h2.h2__title Есть вопросы?
+        p.t Напишите нам на почту. Ответим в течении дня
+        form
+          input(type="text") Ваша почта
+          input(type="text") Сообщение
+          input(type="checkbox") Я согласен
+          +btn('Отправить').btn
+

@@ -1,0 +1,12 @@
+mixin footer(time)
+  footer.page__footer-wrapper
+    .container
+      .footer__inner
+        .footer__info
+          .header__logo
+            +logo
+          .footer__time
+            p= time
+        .footer__links
+          .header__nav
+            block

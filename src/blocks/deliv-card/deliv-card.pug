@@ -1,0 +1,25 @@
+mixin deliv-card()
+
+
+  -
+    var delivlist = {
+      'img/ico1.png' : 'buy',
+      'img/ico2.png' : 'gift',
+      'img/ico3.png' : 'devivery cost',
+      'img/ico4.png' : 'devivery city'
+    };
+
+
+  section.deliv
+    .container
+      .deliv__inner
+        h2.h2__title Доставим в любое место
+        p.t ну почти
+        ul.deliv__list
+          each val, key in delivlist
+            li.deliv__item
+              p= key
+              p= val
+
+
+

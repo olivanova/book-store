@@ -1,0 +1,15 @@
+mixin main-nav(selected)
+
+  -
+    var menu = {
+      'Главная': '/index.html',
+      'Книги': '/books.html',
+      'Рекомендации': '/recommended.html',
+      'Контакты': '/contact.html'
+    };
+
+  nav.main-nav
+    ul.main-nav__list
+      each val, key in menu
+        li(class= selected.toLowerCase() === key.toLowerCase() ? 'main-nav__item  main-nav__item--active' : 'main-nav__item')
+          a(href=val, title=key)= key

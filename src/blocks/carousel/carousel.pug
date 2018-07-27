@@ -1,0 +1,32 @@
+mixin carousel()
+  .promo__carousel#carousel
+    .carousel__item
+      .carousel__item__info
+        .carousel__item__descr
+          p= descr
+        .carousel__item__title
+          p= title
+        .carousel__item__link
+          a(href= link)
+      .carousel__item__img
+        img(src= book-img)
+
+-
+  var slide = {
+    'slide1':[
+      {
+        'titel':'simpsons1',
+        'descr':'funny book1',
+        'link':'google.com',
+        'img':'flaticon.com'
+      }
+    ],
+    'slide2':[
+      {
+        'titel':'simpsons2',
+        'descr':'funny book2',
+        'link':'google.com',
+        'img':'flaticon.com'
+      }
+    ]
+  };
