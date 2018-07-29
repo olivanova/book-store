@@ -1,8 +1,39 @@
+-
+  var booksnew = {
+    'books' : [
+    {
+      'title': 'Латеральная логика',
+      'descr': 'Головоломный путь к нестандартному мышлению',
+      'img': 'img/book-cover-logic.jpg',
+      'price':'500 ₽'
+    },
+    {
+      'title': 'Путеводитель по лжи',
+      'descr': 'Критическое мышление в эпоху постправды',
+      'img': 'img/book-cover-lie.jpg',
+      'price':'630 ₽'
+    },
+    {
+      'title': 'Дао физики',
+      'descr': 'Исследование параллелей между современной физикой и восточной философией',
+      'img': 'img/book-cover-dao.jpg',
+      'price':'560 ₽'
+    },
+    {
+      'title': 'Не очевидно',
+      'descr': 'Как выявлять тренды раньше других',
+      'img': 'img/book-cover-not-obvious.jpg',
+      'price':'365 ₽'
+    }
+    ]
+  }
+
 mixin new-books()
   section.new-books
     .container
       .new-books_inner
         h2.h2__titel Новинки
-        p.t-link Все новинки
+        a(href= '#').t-link Все новинки
         .books__list
-            block
+          each book in booksnew.books
+            +books-min-card(book.img, book.title, book.descr, book.price)

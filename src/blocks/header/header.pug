@@ -3,12 +3,12 @@ mixin header(time)
     .container
       .header__inner
         .header__info
-          .header__logo
+          a(href='/index.html')
             +logo
           .header__time
             p= time
         .header__links
           .header__nav
             block
-          +header_buy()
+          +header_icon()
 

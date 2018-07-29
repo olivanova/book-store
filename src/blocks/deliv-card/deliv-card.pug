@@ -1,25 +1,19 @@
 mixin deliv-card()
-
-
-  -
-    var delivlist = {
-      'img/ico1.png' : 'buy',
-      'img/ico2.png' : 'gift',
-      'img/ico3.png' : 'devivery cost',
-      'img/ico4.png' : 'devivery city'
-    };
-
-
   section.deliv
     .container
       .deliv__inner
         h2.h2__title Доставим в любое место
         p.t ну почти
         ul.deliv__list
-          each val, key in delivlist
-            li.deliv__item
-              p= key
-              p= val
-
-
-
+          li.deliv__item
+            img(src= 'img/icon_book.svg')
+            p Покупаете книги на сайте в любимом формате — бумажные, электронные или аудио.
+          li.deliv__item
+            img(src= 'img/icon_box.svg')
+            p Мы подарим вам «Набор читателя» и добавим в посылку.
+          li.deliv__item
+            img(src= 'img/icon_delivery.svg')
+            p Бесплатно доставляем заказы от 3 000  по всей России.
+          li.deliv__item
+            img(src= 'img/icon_map.svg')
+            p Доставка в более чем 300 городов России, по Москве и Санкт-Петербургу — бесплатно.

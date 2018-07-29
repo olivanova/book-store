@@ -1,8 +1,8 @@
-mixin books-min-card()
+mixin books-min-card(img, title, descr, price)
   .book-min-card__inner
     .book-min-card__img
-      img
+      img(src= img)
     .book-min-card__info
-      .book-min-card__title
-      .book-min-card__descr
-      .book-min-card__price
+      .book-min-card__title= title
+      .book-min-card__descr= descr
+      .book-min-card__price= price

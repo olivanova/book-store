@@ -1,32 +1,40 @@
-mixin carousel()
-  .promo__carousel#carousel
-    .carousel__item
-      .carousel__item__info
-        .carousel__item__descr
-          p= descr
-        .carousel__item__title
-          p= title
-        .carousel__item__link
-          a(href= link)
-      .carousel__item__img
-        img(src= book-img)
-
 -
-  var slide = {
-    'slide1':[
-      {
-        'titel':'simpsons1',
-        'descr':'funny book1',
-        'link':'google.com',
-        'img':'flaticon.com'
-      }
-    ],
-    'slide2':[
-      {
-        'titel':'simpsons2',
-        'descr':'funny book2',
-        'link':'google.com',
-        'img':'flaticon.com'
-      }
+  var sliders = {
+    'slider': [
+      { 'descr': 'Новое поступление книги «Симпсоны и их математические секреты»',
+        'title': 'Для поклонников сериала «Симпсоны» и для всех, кому интересна математика.',
+        'img': 'img/book-promo1.jpg',
+        'linkT': 'Хочу узнать о книге больше',
+        'link':'#'
+      },
+      // { 'descr': 'Новое поступление книги «45 татуировок менеджера»',
+      //   'title': 'Книга про правила российского руководителя',
+      //   'img': 'img/book-promo2.jpg',
+      //   'linkT': 'Хочу узнать о книге больше',
+      //   'link':'#'
+      // },
+      // { 'descr': 'Узнайте как обучить персонал с новой книгой «Пятая дисциплина»',
+      //   'title': 'Искусство и практика обучающейся организации',
+      //   'img': 'img/book-promo3.jpg',
+      //   'linkT': 'Хочу узнать о книге больше',
+      //   'link':'#'
+      // },
     ]
-  };
+  }
+
+
+mixin carousel()
+  .promo__carousel#carousel(data-slick='{"slidesToShow": 1, "slidesToScroll": 4}')
+    each item in sliders.slider
+      .carousel__item
+        .carousel__item__info
+          .carousel__item__descr
+            p= item.descr
+          .carousel__item__title
+            p= item.title
+          .carousel__item__link
+            a(href= item.link)= item.linkT
+        .carousel__item__img
+          img(src= item.img width= 270)
+
+
